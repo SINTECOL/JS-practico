@@ -1,13 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geométricas</title>
+    <link rel="stylesheet" href="./figuras.css">
 </head>
+
 <body>
-    <h1>Figuras Geométricas</h1>
+    
+    <header> 
+        <figure class="logo"> <img src="./figures/logo.png" alt="Este es el logo, un cuadradito"> </figure>
+        <h1>Figuras Geométricas: Geometric tool</h1>
+    </header>
+
+    <main>
+        <p>Elije el tipo de figura al que le vas a calcular los parámetros</p>
+        <div class="selector-container"> 
+            <div class="selector-cuadro">
+                <button type="button" class="btn"> <img src="./figures/cuadro.png" height ="80" width="80" /></button> 
+            </div>
+            <div class="selector-triangulo">
+                <button type="button" class="btn"> <img src="./figures/triangulo2.png" height ="80" width="80" /></button> 
+            </div>
+            <div class="selector-circulo">
+                <button type="button" class="btn"> <img src="./figures/circulo2.png" height ="80" width="80" /></button>
+            </div>
+        </div>
+
+        <div class="contenedor-calculos">
+            <div class="datos-solicitados">
+                <h2>¡Vamos a calcular el área y perimetro de un cuadrado!</h2>
+                <p>Ingresa la medida en centimetros de los lados del cuadrado.</p>
+                <form>
+                    <input type="number" class="datos-solicitados" id="InputCuadrado">
+                    <button type="button" class="btn2" onclick="calcularPerimetroCuadrado()">Calcular perímetro</button>
+                    <button type="button" class="btn2" onclick="calcularAreaCuadrado()">Calcular área</button>
+                </form>
+                
+                
+            </div>
+            <div class="datos-calculados">
+                <figure> <img src="./figures/cuadro2.png" width="75%"> </figure>
+                <div class="resultados"> 
+                    <p>El perímetro es:  </p>
+                    <p id="resultadoPerimetro"> 0 cm</p>
+                </div>
+                <div class="resultados"> 
+                    <p>El área es:  </p>
+                    <p id="resultadoArea"> 0 cm^2</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
 <script src="./figuras.js"> </script>
 </body>

@@ -53,7 +53,7 @@ console.groupEnd();
 
 // Código de cálculo de un circulo
 
-console.log("Circulo");
+console.group("Circulo");
 const radio = 6;
 
 console.log("El radio del circulo es: "+radio +" cm");
@@ -71,3 +71,16 @@ return Math.PI*Math.pow(radio,2);
 console.log("El área del circulo es: "+areaCirculo(radio) + " cm^2");
 
 console.groupEnd();
+
+function calcularPerimetroCuadrado(){
+    const lado = document.getElementById("InputCuadrado").value;
+    const perimetro = perimetroCuadro(lado);
+    document.getElementById("resultadoPerimetro").innerHTML=" " + perimetro+" cm";
+    document.getElementById("resultadoArea").innerHTML=" 0 cm^2";
+}
+
+function calcularAreaCuadrado(){
+    const lado = document.getElementById("InputCuadrado").value;
+    document.getElementById("resultadoArea").innerHTML=" " + lado*lado+" cm^2";
+    document.getElementById("resultadoPerimetro").innerHTML="0 cm";
+}
